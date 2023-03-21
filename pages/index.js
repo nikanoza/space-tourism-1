@@ -28,18 +28,33 @@ export default function Home() {
           display: "flex",
           flexDirection: "column",
           gap: "16px",
+          padding: `7% 27%`,
         }}
       >
         <Typography
           variant="p"
-          sx={{ color: "#D0D6F9", letterSpacing: "2.7px" }}
+          sx={{
+            color: "#D0D6F9",
+            letterSpacing: "2.7px",
+            fontSize: { md: "20px" },
+          }}
         >
           SO, YOU WANT TO TRAVEL TO
         </Typography>
-        <Typography variant="h1" sx={{ color: "#FFFFFF", fontSize: "80px" }}>
+        <Typography
+          variant="h1"
+          sx={{ color: "#FFFFFF", fontSize: { xs: "80px", md: "150px" } }}
+        >
           SPACE
         </Typography>
-        <Typography variant="p" sx={{ color: "#D0D6F9", lineHeight: "25px" }}>
+        <Typography
+          variant="p"
+          sx={{
+            color: "#D0D6F9",
+            lineHeight: "25px",
+            fontSize: { md: "16px" },
+          }}
+        >
           Let’s face it; if you want to go to space, you might as well genuinely
           go to outer space and not hover kind of on the edge of it. Well sit
           back, and relax because we’ll give you a truly out of this world
@@ -49,19 +64,23 @@ export default function Home() {
       <Box
         sx={{
           backgroundColor: "#FFFFFF",
-          width: "150px",
-          height: "150px",
+          width: { xs: "150px", md: "242px" },
+          height: { xs: "150px", md: "242px" },
           borderRadius: "100%",
           margin: "auto",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          marginTop: "20%",
+          marginTop: { xs: "20%", md: "7%" },
         }}
       >
         <Typography
           variant="p"
-          sx={{ color: "#0B0D17", letterSpacing: "2.7px" }}
+          sx={{
+            color: "#0B0D17",
+            letterSpacing: "2.7px",
+            fontSize: { md: "32px" },
+          }}
         >
           EXPLORE
         </Typography>
