@@ -13,7 +13,7 @@ export default function Header() {
         sx={{
           display: "flex",
           justifyContent: "space-between",
-          padding: "25px",
+          padding: { xs: "25px", lg: "7%" },
         }}
       >
         <Image
