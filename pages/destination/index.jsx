@@ -22,7 +22,7 @@ export default function Destination() {
         sx={{
           color: "#FFFFFF",
           textAlign: { xs: "center", md: "left" },
-          paddingLeft: { md: "30px", lg: "7%" },
+          paddingLeft: { md: "30px", lg: "15%" },
           marginTop: { md: "5%" },
         }}
       >
