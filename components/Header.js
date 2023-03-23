@@ -1,9 +1,11 @@
-import { Box, CardMedia, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Header() {
   const [nav, setNav] = useState(false);
+  const [active, setActive] = useState("HOME");
   const handleClick = () => {
     setNav(!nav);
   };
@@ -19,8 +21,8 @@ export default function Header() {
         <Image
           src="/assets/shared/logo.svg"
           alt="Logo"
-          width={40}
-          height={40}
+          width={50}
+          height={50}
         />
         <Box
           sx={{
@@ -28,18 +30,51 @@ export default function Header() {
             gap: "37px",
           }}
         >
-          <Typography variant="h6" sx={{ color: "#FFFFFF" }}>
-            HOME
-          </Typography>
-          <Typography variant="h6" sx={{ color: "#FFFFFF" }}>
-            DESTINATION
-          </Typography>
-          <Typography variant="h6" sx={{ color: "#FFFFFF" }}>
-            CREW
-          </Typography>
-          <Typography variant="h6" sx={{ color: "#FFFFFF" }}>
-            TECHNOLOGY
-          </Typography>
+          <Link href="/">
+            <Button
+              onClick={() => setActive("HOME")}
+              sx={{
+                color: `${active === "HOME" ? "#FFFFFF" : "#D0D6F9"}`,
+                fontSize: "21px",
+              }}
+            >
+              HOME
+            </Button>
+          </Link>
+
+          <Link href="/destination">
+            <Button
+              onClick={() => setActive("DESTINATION")}
+              sx={{
+                color: `${active === "DESTINATION" ? "#FFFFFF" : "#D0D6F9"}`,
+                fontSize: "21px",
+              }}
+            >
+              DESTINATION
+            </Button>
+          </Link>
+          <Link href="/crew">
+            <Button
+              onClick={() => setActive("CREW")}
+              sx={{
+                color: `${active === "CREW" ? "#FFFFFF" : "#D0D6F9"}`,
+                fontSize: "21px",
+              }}
+            >
+              CREW
+            </Button>
+          </Link>
+          <Link href="/technology">
+            <Button
+              onClick={() => setActive("TECHNOLOGY")}
+              sx={{
+                color: `${active === "TECHNOLOGY" ? "#FFFFFF" : "#D0D6F9"}`,
+                fontSize: "21px",
+              }}
+            >
+              TECHNOLOGY
+            </Button>
+          </Link>
         </Box>
         <Box
           onClick={handleClick}
@@ -71,38 +106,46 @@ export default function Header() {
             padding: "32px",
           }}
         >
-          <Typography
-            variant="p"
-            sx={{
-              color: "#FFFFFF",
-            }}
-          >
-            00 HOME
-          </Typography>
-          <Typography
-            variant="p"
-            sx={{
-              color: "#FFFFFF",
-            }}
-          >
-            01 DESTINATION
-          </Typography>
-          <Typography
-            variant="p"
-            sx={{
-              color: "#FFFFFF",
-            }}
-          >
-            02 CREW
-          </Typography>
-          <Typography
-            variant="p"
-            sx={{
-              color: "#FFFFFF",
-            }}
-          >
-            03 TECHNOLOGY
-          </Typography>
+          <Link href="/">
+            <Button
+              variant="p"
+              sx={{
+                color: "#FFFFFF",
+              }}
+            >
+              00 HOME
+            </Button>
+          </Link>
+          <Link href="/destination">
+            <Button
+              variant="p"
+              sx={{
+                color: "#FFFFFF",
+              }}
+            >
+              01 DESTINATION
+            </Button>
+          </Link>
+          <Link href="/crew">
+            <Button
+              variant="p"
+              sx={{
+                color: "#FFFFFF",
+              }}
+            >
+              02 CREW
+            </Button>
+          </Link>
+          <Link href="/technology">
+            <Button
+              variant="p"
+              sx={{
+                color: "#FFFFFF",
+              }}
+            >
+              03 TECHNOLOGY
+            </Button>
+          </Link>
         </Box>
       ) : null}
     </>
