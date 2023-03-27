@@ -64,7 +64,7 @@ export default function index() {
               gap: "16px",
               justifyContent: { xs: "center", lg: "left" },
               order: { md: "2" },
-              paddingLeft: "15%",
+              paddingLeft: { lg: "15%" },
             }}
           >
             <Box
