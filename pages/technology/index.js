@@ -6,7 +6,6 @@ import data from "../../data.json";
 export default function Technology() {
   const [technologyIndex, setTechnologyIndex] = useState(0);
   const technology = data.technology[technologyIndex];
-  console.log(data.technology);
   return (
     <Box
       sx={{

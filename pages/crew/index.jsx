@@ -3,7 +3,7 @@ import { Box, Typography } from "@mui/material";
 import React, { useState } from "react";
 import data from "../../data.json";
 
-export default function index() {
+export default function Crew() {
   const [crewIndex, setCrewIndex] = useState(0);
   const crew = data.crew[crewIndex];
   return (

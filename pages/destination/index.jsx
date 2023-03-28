@@ -69,6 +69,7 @@ export default function Destination() {
           >
             {data.destinations.map((item) => (
               <Button
+                key={item.name}
                 sx={{
                   color: `${
                     item.name === filteredItem.name ? "#FFFFFF" : "#D0D6F9"
